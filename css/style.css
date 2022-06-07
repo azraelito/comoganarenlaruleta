@@ -1,0 +1,360 @@
+/* Reseteo = buena practica */
+* {
+    margin: 0;
+    padding: 0;
+    /* No genere margin ni padding fuera de lo que yo defina */
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.menuGeneral {
+    display: flex;
+    width: 95%;
+    margin-left: 1%;
+    margin-right: 4%;
+    /*  me lo ajusta en el eje x */
+    justify-content: space-between;
+    /*  me lo ajusta en el eje y */
+    align-items: center;
+}
+
+.header {
+    background-color: #000000;
+    display: flex;
+    width: 100%;
+    margin: auto;
+    position: sticky;
+    top: 0;
+}
+
+.menu {
+    display: flex;
+    justify-content: flex-end;
+
+    padding: 15px;
+    flex-wrap: wrap;
+    background-color: black;
+
+}
+
+.menu li {
+    list-style-type: none;
+    padding: 15px;
+    transition: all 0.2s;
+    margin: 0px 10px;
+    cursor: pointer;
+
+
+}
+
+
+.menu a {
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+
+}
+
+.menu .menuDesplegable ol {
+    display: none;
+}
+
+.menu li:hover {
+    background-color: rgb(255, 0, 0);
+    transform: scale(1.098);
+
+}
+
+.menuDesplegable ol {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+}
+
+
+/* error al desplegar el menu */
+.menu .menuDesplegable:hover ol {
+    display: block;
+    background-color: black;
+    position: absolute;
+    margin-top: 49px;
+}
+
+
+.mainIndex {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+    align-items: center;
+    justify-items: center;
+
+
+}
+
+.izquierda {
+    width: 50%;
+
+}
+
+.derecha {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+
+}
+
+
+
+/* 1. Selector de tipo etiqueta */
+h1 {
+    color: rgb(255, 0, 0);
+}
+
+h2 {
+    color: rgb(255, 0, 0);
+}
+
+ul li {
+    color: rgb(26, 255, 0);
+}
+
+
+.logo {
+    margin-top: 5%;
+    margin-bottom: 5%;
+
+}
+
+.block {
+    background-color: rgb(255, 255, 255);
+    border: solid 5px rgb(0, 213, 50);
+    display: block;
+
+}
+
+.inline {
+    background-color: rgb(255, 255, 255);
+    display: inline;
+}
+
+.parrafo {
+
+    font-size: 15px;
+    text-align: center;
+    width: 100%;
+
+}
+
+.parrafo2 {
+
+    font-size: 16px;
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+}
+
+/* Selector de tipo clase */
+.tituloTabla {
+    color: darkslategray;
+
+}
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(0, 0, 0);
+    color: darkslategray;
+    font-size: 20px;
+
+
+
+}
+
+.footer li {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    flex-wrap: wrap;
+
+    text-transform: uppercase;
+    text-decoration: none;
+
+}
+
+.footer a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+
+/* Selector de tipo ID */
+#datosTabla {
+    background-color: aquamarine;
+    font-size: 23px;
+    color: beige;
+
+}
+
+.personaje {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.personaje h1 {
+    text-align: center;
+    margin-top: 10px;
+    background-color: #000000;
+    color: #ffffff;
+    width: 90%;
+    margin: 0 auto;
+
+}
+
+.titulo {
+    margin: 10px auto;
+    text-align: center;
+}
+
+.titulo h1 {
+    background-color: #000000;
+    color: #ffffff;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* CONTACTO HTML */
+.formulario {
+
+    background-color: white;
+    padding: 10%;
+    margin-bottom: 10%;
+    margin-left: 25%;
+}
+
+.formulario input {
+    width: 100%;
+    padding: 7px;
+    border: 1px solid #000000;
+    background-color: rgb(0 213 50);
+    color: white;
+
+}
+
+.formulario input::placeholder,
+textarea::placeholder {
+    color: rgb(255, 255, 255);
+}
+
+.formulario textarea {
+    width: 100%;
+    padding: 7px;
+    border: 1px solid #000000;
+    background-color: rgb(0 213 50);
+
+}
+
+label>input {
+    width: auto !important;
+}
+
+
+.submit {
+    flex: auto;
+}
+
+.grillaIndex {
+    display: grid;
+    grid-template-columns: 1fr;
+
+}
+
+/* Media Queries (Responsive) */
+
+@media only screen and (max-width:500px) {
+
+
+    .header {
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .menu {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu li {
+        padding: 5px;
+
+    }
+
+    .derecha {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .menuGeneral {
+        flex-direction: column;
+    }
+
+    .logo {
+        width: 50%;
+        margin: auto;
+    }
+
+    .containerLogo {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .header ul li a {
+        font-size: 14px;
+    }
+
+    .mainIndex {
+        margin-top: 3px;
+        grid-template-columns: 1fr;
+    }
+
+    .mainIndex .derechaMetodo{
+        grid-template-columns: 1fr;
+    }
+    .mainIndex .derecha {
+        width: 80%;
+    }
+
+    .mainIndex .izquierda {
+        width: 100%;
+    }
+
+    .mainIndex .izquierdaIndex {
+        width: 80%;
+    }
+
+    .mainIndex img {
+        width: 100%;
+    }
+
+    .footer li {
+        font-size: 13px;
+    }
+}
+
+
+
+
+
+/* nomenclatura:
+1. camelCase => letraGrandeOscura 
+2. snake_case => letra_grande_oscura
+3. kebab-case => letra-grande-oscura 
+*/
