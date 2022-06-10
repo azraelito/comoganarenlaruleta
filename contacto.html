@@ -18,9 +18,10 @@
 
     <header class="header">
         <div class="menuGeneral">
-            <div class="containerLogo">
+            
+            <a href="./index.html"><div class="containerLogo">
                 <img class="logo" src="./img/logo.png" width="100px" alt="Logo">
-            </div>
+            </div></a>
 
             <nav>
 
@@ -58,33 +59,48 @@
                     alt="Ruleta formulario" width="600px">
             </div>
 
-            <div class="derecha">
+            <div class="derechaContacto">
 
                 <form class="formulario" action="#" method="get">
                     <form action="#" method="get">
                         <label for="fname">Nombre:</label><br>
+
                         <input type="text" id="fname" name="fname" placeholder="Ariel"><br><br>
-                        <label for="lname">Apellido:</label><br><br>
+                        <label for="lname">Apellido:</label><br>
 
                         <input type="text" id="lname" name="lname" placeholder="Blanco"><br><br>
-                        <p>Cual es tu jugador preferido?</p>
-                    
-                        <input type="radio" id="Jugadores" name="jugadorPreferido" value="Jacobo">
-                        <label for="Jacobo">Jacobo</label><br>
+                        <p>Cual es tu jugador preferido?</p><br>
 
-                        <input type="radio" id="Jugadores" name="jugadorPreferido" value="Sofovich">
-                        <label for="Sofovich">Sofovich</label><br>
-                        <input type="radio" id="Jugadores" name="jugadorPreferido" value="emiliDisi">
-                        <label for="emiliDisi">Emilio Disi</label> <br> <br>
+                        <div class="inputCenter">
+                            <label for="Jacobo">Jacobo</label><br><br>
+                            <input type="radio" id="Jugadores" name="jugadorPreferido" value="Jacobo">
+                        </div>
+
+                        <div class="inputCenter">
+                            <label for="Sofovich">Sofovich</label><br><br>
+                            <input type="radio" id="Jugadores" name="jugadorPreferido" value="Sofovich">
+                        </div>
+
+                        <div class="inputCenter">
+                            <label for="emiliDisi">Emilio</label><br><br>
+                            <input type="radio" id="Jugadores" name="jugadorPreferido" value="emiliDisi">
+
+                        </div><br>
 
 
-                        <label for="suscripcion"> Suscribirse al newsletter </label>
-                        <input type="checkbox" id="suscripcion" name="suscripcion" value="suscripcion">
-                        <br><br>
 
-                        <input class="submit" type="submit" value="Enviar">
+                        <div class="inputCenter">
+                            <label for="formulario"> Suscribirse </label>
+                            <input type="checkbox" id="suscripcion" name="suscripcion" value="suscripcion">
+                            <br><br><br><br>
 
+                        </div>
+                        <p>Comentarios:
+                        </p><br>
+                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                        <br>
 
+                        <button class="botonEnviar"> Enviar </button>
                     </form>
 
 
